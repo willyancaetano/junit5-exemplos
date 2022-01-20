@@ -40,55 +40,18 @@
         <url>https://github.com/willyancaetano/junit5-exemplos/pipelines</url>
     </ciManagement>
 
-    <contributors>
-        <contributor>
-            <name>Some Contributor</name>
-            <email>some.contributor@example.com</email>
-            <url>http://example.com/</url>
-            <organization>Example Organization</organization>
-            <organizationUrl>http://example.com/</organizationUrl>
-            <roles>
-                <role>scrum-master</role>
-            </roles>
-            <timezone>Europe/Amsterdam</timezone>
-        </contributor>
-        <contributor>
-            <name>Another Contributor</name>
-            <email>another.contributor@example.com</email>
-            <url>http://example.com/</url>
-            <organization>Example Organization</organization>
-            <organizationUrl>http://example.com/</organizationUrl>
-            <roles>
-                <role>product-owner</role>
-            </roles>
-            <timezone>Europe/Amsterdam</timezone>
-        </contributor>
-    </contributors>
-
     <developers>
         <developer>
-            <id>somedev</id>
-            <email>some.developer@example.com</email>
-            <name>Some Developer</name>
-            <organization>Example Organization</organization>
-            <organizationUrl>http://example.com/</organizationUrl>
+            <id>willyancaetano</id>
+            <email>willyancaetano775@gmail.com</email>
+            <name>Willyan Guimarães Caetano</name>
+            <organization>Digital Innovation One</organization>
+            <organizationUrl>https://digitalinnovation.one</organizationUrl>
             <roles>
                 <role>architect</role>
                 <role>developer</role>
             </roles>
-            <timezone>Europe/Amsterdam</timezone>
-        </developer>
-        <developer>
-            <id>otherdev</id>
-            <email>other.developer@example.com</email>
-            <name>Other Developer</name>
-            <organization>Example Organization</organization>
-            <organizationUrl>http://example.com/</organizationUrl>
-            <roles>
-                <role>architect</role>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Amsterdam</timezone>
+            <timezone>America/Sao_Paulo</timezone>
         </developer>
     </developers>
 
