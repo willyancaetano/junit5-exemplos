@@ -14,7 +14,10 @@ public class AssertionsTeste {
         int[] primeiroLancamento = {10, 20, 30, 40, 50};
         int[] segundoLancamento = {10, 20, 30, 40, 50};
 
-        assertArrayEquals(primeiroLancamento, segundoLancamento);
+//        assertArrayEquals(primeiroLancamento, segundoLancamento);
+//        fail("error no teste");
+
+        assertEquals(5, 3 + 3);
     }
 
     @Test
