@@ -24,32 +24,34 @@
 
 package com.github.willyancaetano.junit;
 
-import org.junit.jupiter.api.*;
+import java.util.logging.Logger;
 
-@TestMethodOrder(MethodOrderer.DisplayName.class)
-public class EscolhendoAOrdemTeste {
+/**
+ * "Hipotético" exemplo de uma classe que conecta com banco de dados. <br />
+ *
+ * <b>DISCLAIMER</b>: <i>Não é um exemplo real/atual desse cenário, serve apenas como exemplo para os testes com JUnit</i>
+ */
+public class GerenciadorDeConexaoComBancoDeDados {
 
-    @DisplayName("Teste que valida se o usuário foi criado")
-    @Test
-    void validaFluxoA() {
-        Assertions.assertTrue(true);
+    private static final Logger LOGGER = Logger.getLogger(GerenciadorDeConexaoComBancoDeDados.class.getName());
+
+    public static void iniciarConexao() {
+        //fez algo
+        LOGGER.info("Iniciou conexao");
     }
 
-    @DisplayName("B")
-    @Test
-    void validaFluxoB() {
-        Assertions.assertTrue(true);
+    public static void finalizarConexao() {
+        //fez algo
+        LOGGER.info("finalizou conexao");
     }
 
-    @DisplayName("C")
-    @Test
-    void validaFluxoC() {
-        Assertions.assertTrue(true);
+    public static void insereDados(Pessoa pessoa) {
+        //insere pessoa no DB
+        LOGGER.info("inseriu dados");
     }
 
-    @DisplayName("D")
-    @Test
-    void validaFluxoD() {
-        Assertions.assertTrue(true);
+    public static void removeDados(Pessoa pessoa) {
+        //remove pessoa no DB
+        LOGGER.info("removeu dados");
     }
 }

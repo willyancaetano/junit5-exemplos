@@ -26,30 +26,37 @@ package com.github.willyancaetano.junit;
 
 import org.junit.jupiter.api.*;
 
-@TestMethodOrder(MethodOrderer.DisplayName.class)
-public class EscolhendoAOrdemTeste {
+import java.time.LocalDateTime;
 
-    @DisplayName("Teste que valida se o usuário foi criado")
+public class AfterBeforeTeste {
+
+    @BeforeAll
+    static void configuraConexao() {
+        GerenciadorDeConexaoComBancoDeDados.iniciarConexao();
+    }
+
+    @BeforeEach
+    void insereDadosParaTeste() {
+        GerenciadorDeConexaoComBancoDeDados.insereDados(new Pessoa("João", LocalDateTime.of(2000, 1, 1, 13, 0, 0)));
+    }
+
+    @AfterEach
+    void removeDadosDoTeste() {
+        GerenciadorDeConexaoComBancoDeDados.removeDados(new Pessoa("João", LocalDateTime.of(2000, 1, 1, 13, 0, 0)));
+    }
+
     @Test
-    void validaFluxoA() {
+    void validarDadosDeRetorno() {
         Assertions.assertTrue(true);
     }
 
-    @DisplayName("B")
     @Test
-    void validaFluxoB() {
-        Assertions.assertTrue(true);
+    void validarDadosDeRetorno2() {
+        Assertions.assertNull(null);
     }
 
-    @DisplayName("C")
-    @Test
-    void validaFluxoC() {
-        Assertions.assertTrue(true);
-    }
-
-    @DisplayName("D")
-    @Test
-    void validaFluxoD() {
-        Assertions.assertTrue(true);
+    @AfterAll
+    static void finalizarConexao() {
+        GerenciadorDeConexaoComBancoDeDados.finalizarConexao();
     }
 }
