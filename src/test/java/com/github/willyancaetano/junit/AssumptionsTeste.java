@@ -1,4 +1,4 @@
-package com.github.willyancaetano;
+package com.github.willyancaetano.junit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;

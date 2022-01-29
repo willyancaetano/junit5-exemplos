@@ -22,7 +22,7 @@
     SOFTWARE.
  */
 
-package com.github.willyancaetano;
+package com.github.willyancaetano.junit;
 
 public class Conta {
 

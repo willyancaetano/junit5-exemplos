@@ -1,4 +1,4 @@
-package com.github.willyancaetano;
+package com.github.willyancaetano.junit;
 
 import java.util.logging.Logger;
 
