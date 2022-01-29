@@ -1,4 +1,4 @@
-package one.digitalinnovation.junit;
+package com.github.willyancaetano;
 
 import org.junit.jupiter.api.*;
 

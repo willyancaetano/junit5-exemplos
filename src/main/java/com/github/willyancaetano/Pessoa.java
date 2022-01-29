@@ -22,32 +22,41 @@
     SOFTWARE.
  */
 
-package one.digitalinnovation.junit;
+package com.github.willyancaetano;
 
-public class Conta {
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
-    private String numeroConta;
+public class Pessoa {
 
-    private int saldo;
+    private String nome;
 
-    public Conta(String numeroConta, int saldo) {
-        this.numeroConta = numeroConta;
-        this.saldo = saldo;
+    private LocalDateTime nascimento;
+
+    public Pessoa(String nome, LocalDateTime nascimento) {
+        this.nome = nome;
+        this.nascimento = nascimento;
     }
 
-    public String getNumeroConta() {
-        return numeroConta;
+    public int getIdade() {
+        return (int) ChronoUnit.YEARS.between(nascimento, LocalDateTime.now());
     }
 
-    public int getSaldo() {
-        return saldo;
+    public boolean ehMaiorDeIdade() {
+        return getIdade() >= 18;
     }
 
-    public void lancaCredito(int valor) {
-        this.saldo += valor;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return nome.equals(pessoa.nome) && Objects.equals(nascimento, pessoa.nascimento);
     }
 
-    public void lancaDebito(int valor) {
-        this.saldo -= valor;
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, nascimento);
     }
 }
